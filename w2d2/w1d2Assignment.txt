@@ -1,0 +1,95 @@
+
+W1d2 Assignment
+
+Coding homework is pushed to my github  CS305/w1d1assignment.js at my
+ · MelkamsewG/CS305 (github.com)
+
+ Homework part 1
+First do the readings and complete the following tasks from The JavaScript Language book
+JavaScript Fundamentals chapter 
+The “switch” statement 
+• Rewrite the “Switch” into an “if” 
+Write the code using if..else which would correspond to the following switch
+switch (browser) { 
+case 'Edge': 
+alert( "You've got the Edge!" );
+ break; 
+case 'Chrome': 
+case 'Firefox': 
+case 'Safari': 
+case 'Opera': 
+alert( 'Okay we support these browsers too' ); 
+break; 
+default: 
+alert( 'We hope that this page looks ok!' ); 
+}
+Ans. if (browser == 'Edge') { 
+alert ("You've got the Edge!"); 
+} else if (browser == 'Chrome' || browser == 'Firefox' || browser == 'Safari' || browser == 'Opera') {
+ alert(‘Okay we support these browsers too' );
+} else { 
+alert( 'We hope that this page looks ok!' ); 
+}
+
+• Rewrite “if” into “switch” Functions 
+Rewrite the code below using a single switch statement:
+let a = +prompt('a?', ''); 
+if (a == 0) { 
+alert( 0 ); 
+} if (a == 1) { 
+alert( 1 ); 
+} if (a == 2 || a == 3) {
+ alert( '2,3' );
+ }
+Ans.  let a = +prompt('a?', ''); 
+switch (a) { 
+case 0: 
+alert( 0 );
+ break; 
+case 1: 
+alert( 1 );
+ break; 
+case 2: 
+case 3: 
+alert( '2,3' );
+ break; 
+}
+• Rewrite the function using “?” or “||” 
+function checkAge(age) {
+ if (age > 18) { 
+return true; 
+} else {
+return confirm('Did parents allow you?'); 
+} 
+}
+Using ?
+function checkAge(age) { 
+return (age > 18) ? true : confirm('Did parents allow you?');
+ }
+Using  OR ||
+function checkAge(age) { 
+return (age > 18) || confirm('Did parents allow you?');
+ }
+
+• Function min(a, b) 
+Write a function min(a, b) which returns the least of two numbers a and b .
+min(2, 5) == 2  ,  min(3, -1) == -1  ,    min(1, 1) == 1
+function min(a, b) {
+ if (a < b) { 
+return a; 
+} else { 
+return b;
+ } 
+}
+• Function pow(x, n)
+Write a function pow(x,n) that returns x in power n . Or, in other words, multiplies x by itself n times and returns the result.
+pow(3, 2) = 3 * 3 = 9 
+pow(3, 3) = 3 * 3 * 3 = 27 
+pow(1, 100) = 1 * 1 * ...* 1 = 1
+
+function pow(x, n) { 
+let result = x;
+ for (let i = 1; i < n; i++) { 
+result *= x;
+} return result;
+ }
