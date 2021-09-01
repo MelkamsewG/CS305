@@ -93,3 +93,34 @@ let result = x;
 result *= x;
 } return result;
  }
+
+
+Q#2 defining table
+Input
+Initial amount
+Annual rate
+Number of years
+
+processing
+Calculate current balance which equals monthly rate multiplied by previous balance.
+Previous balance is compounded balance of previous time/year. 
+
+output
+Current balance
+
+Q #3
+
+Input
+Cost of the house
+Base(constant/initial) payment
+Rate of the mortgage
+deductible
+
+processing
+Calculate the down payment 
+which equals initial payment 
+added to the rate multiplied by deductible
+
+output
+down payment
+
