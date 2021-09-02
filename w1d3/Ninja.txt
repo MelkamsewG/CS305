@@ -1,0 +1,47 @@
+Read the ‘Ninja code’ section on your own. Write the real rules implied by the irony examples. E.g., 
+➢ Ninja irony: Make the code as short as possible. 
+      Show how smart you are   Meaning: do not sacrifice code clarity for brevity. 
+       
+     Ans. The code should be clearly understandable for the other reader. give due consideration for clarity rather than brevity.
+
+
+➢ Ninja irony: use single-letter variable names everywhere.
+
+    ➢ Meaning: use meaningful name/letter for variable and consistency of the name or letter is must. 
+
+➢ Ninja irony: If the team rules forbid the use of one-letter and vague names – shorten them, 
+    make abbreviations
+    Meaning: make the names of variables short and understandable. don't make names of variables wordy/long. use abbrevation.
+ 
+➢ Ninja irony: While choosing a name try to use the most abstract word
+
+➢ Meaning: we have to use the idea behind our variabe. type, category or and abstract idea behind what we want to symbolize/represent.
+
+                   
+                            What’s wrong in the test of pow below?
+
+ 	 	it("Raises x to the power n", function() {
+ 	 	let x = 5;
+
+ 		 let result = x;
+ 	 	assert.equal(pow(x, 1), result);
+
+  		result *= x;
+  		assert.equal(pow(x, 2), result);
+
+  		result *= x;
+  		assert.equal(pow(x, 3), result);
+		});
+     the test should have describe including the order of argument and expected result.
+		correct: describe("Raises x to power n", function() {
+ 			 it("4 in the power of 2 equals 16", function() {
+    			assert.equal(pow(5, 1), 5);
+  			});
+
+  			it("4 in the power of 2 equals 16", function() {
+   			 assert.equal(pow(5, 2), 25);
+  			});
+
+  			it("3 in the power of 4 equals 81", function() {
+ 			 });
+			});
