@@ -1,9 +1,6 @@
-
-
-module.impors={computeSalesCommission};
-
-function computeSalesCommission(isSalariedAccount,salesAmount){
-}
+const assert = require("assert");
+const methods = require("./codeQuality.js");
+const computeSalesCommission = methods.computeSalesCommission;
 
 describe("test of ComputSalesCommission", function() {
     it("tests salaried and 200 sales", function() {
