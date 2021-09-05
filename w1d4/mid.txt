@@ -1,0 +1,1 @@
+  write a program that asks te user for imput and prints it back to the console untile the user enters text 'stop'.
