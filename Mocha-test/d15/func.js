@@ -80,7 +80,11 @@ After A is called
 // console.log(testArray.map(testArray => testArray * 100));
 
 
-let testArray = [1, 4, 9, 16];
-let myFun = function() { console.log(testArray.map(testArray * 100)) }
+// let testArray = [1, 4, 9, 16];
+// let myFun = function() { console.log(testArray.map(testArray * 100)) }
 
-myFun();
+// myFun();
+
+function sayHi(John) {
+    alert(`Hello, ${John}`);
+}
