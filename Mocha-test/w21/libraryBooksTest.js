@@ -1,7 +1,7 @@
 "use strict";
 /*  comment out the exports when running in the browser */
 const assert = require("assert");  //always need this with node
-const myExports = require("./app.js");  //with node need the name of your file with your functions here
+const myExports = require("./hmm.js");  //with node need the name of your file with your functions here
 const findTitles = myExports.findTitles;  //do this for all of the functions used in the Mocha tests
 const findAuthors = myExports.findAuthors;
 const findIDs = myExports.findIDs;
@@ -29,7 +29,7 @@ describe("library", function () {
 
     const titles = ["Mockingjay: The Final Book of The Hunger Games", "The Road Ahead", "Walter Isaacson"];
     const authors = ["Bill Gates", "Steve Jobs", "Suzanne Collins"];
-    const ids = [1254, 3245, 4264];
+    const ids = [1248, 6545, 4342];
 
 
     it("findTitles", function () {
@@ -45,10 +45,10 @@ describe("library", function () {
     });
 
     it("addBook", function () {
-        const newBook = {title: "My New Book", author: "Me Too", libraryID: 1144};
+        const newBook = {title: "My New Book", author: "Me Too", libraryID: 1248};
         ids.push(1144);
         ids.sort();
-        assert.deepEqual(addBook("My New Book","Me Too",1144), newBook);
+        assert.deepEqual(addBook("My New Book","Me Too",1248), newBook);
         assert.deepEqual(findIDs(), ids);
     });
 

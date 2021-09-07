@@ -1,0 +1,136 @@
+	
+Chapter Objects: the basics.
+
+	Section Objects:
+		• Hello, object
+		
+		Write the code, one line for each action:
+		1. Create an empty object user .
+		2. Add the property name with the value John .
+		3. Add the property surname with the value Smith .
+		4. Change the value of the name to Pete .
+		5. Remove the property name from the object.
+		
+		let user = { };
+		user.name = "John";
+		user.surname = "Smith";
+		user.name = "Pete";
+		delete user.name;
+
+		• Check for emptiness (include the tests in VSCode)
+
+		Write the function isEmpty(obj) which returns true if the object has no properties, false
+		otherwise.
+			let schedule = {};
+			alert( isEmpty(schedule) ); // true
+			schedule["8:30"] = "get up";
+			alert( isEmpty(schedule) ); // false
+				
+				function isEmpty(obj) {
+				for (let key in obj) {
+				// if the loop has started, there is a property
+				return false;
+					}
+					return true;
+				}
+		
+		• Sum object properties
+
+		We have an object storing salaries of our team:
+			let salaries = {
+			John: 100,
+			Ann: 160,
+			Pete: 130
+			}
+		Write the code to sum all salaries and store in the variable sum . Should be 390 in the example
+		above.
+			let sum = 0;
+			for (let key in salaries) {
+			sum += salaries[key];
+			}
+			alert(sum); // 390
+
+
+		• Multiply numeric properties by 2
+
+		Create a function multiplyNumeric(obj) that multiplies all numeric property values of obj
+		by 2 .
+			// before the call
+			let menu = {
+			width: 200,
+			height: 300,
+			title: "My menu"
+			};
+			multiplyNumeric(menu);
+			// after the call
+			menu = {
+			width: 400,
+			height: 600,
+			title: "My menu"
+			};
+	solution:   	function multiplyNumeric(obj) {
+				for (let key in obj) {
+				if (typeof obj[key] == 'number') {
+				obj[key] *= 2;
+				}
+			}
+		}
+
+				<<<<============================================>>>>>
+4. Write a JavaScript program to display the reading status (i.e. display book name, author name and reading status) of the following books. Go to the editor
+
+let library = [ 
+   {
+	title: 'The Road Ahead',
+       	 author: 'Bill Gates',
+       
+             library ID: 
+   },
+   {
+	title: 'Walter Isaacson',
+       	author: 'Steve Jobs',       
+       	library ID: 
+   },
+   
+   }];
+
+solution:  <!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Reading status of a book library</title>
+</head>
+<body>
+</body>
+</html>
+
+let library = [ 
+    {
+        title: 'Bill Gates',
+        author: 'The Road Ahead',
+        library ID: 
+    },
+    {
+        title: 'Steve Jobs',
+        author: 'Walter Isaacson',
+        library ID: 
+    },
+    {
+        title: 'Mockingjay: The Final Book of The Hunger Games',
+        author: 'Suzanne Collins',
+        library ID: 
+    }];
+
+for (let key of library) {
+ 
+
+for (var i = 0; i < library.length; i++) 
+   {
+    var book = "'" + library[i].title + "'" + ' by ' + library[i].author + ".";
+    if (library[i].readingStatus) {
+      console.log("Already read " + book);
+    } else
+    {
+     console.log("You still need to read " + book);
+    }
+   }
