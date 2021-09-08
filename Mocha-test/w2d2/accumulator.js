@@ -14,14 +14,14 @@ function Accumulator(currentValue, increment) {
      */
     this.accumulate = function() {
             return this.currentValue += this.increment;
-        }
+        };
         /**
          * 
          * @returns the current values
          */
     this.report = function() {
         return this.currentValue;
-    }
+    };
 }
 // let sample = new Accumulator(5,10)
 //  console.log(sample)
