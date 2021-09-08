@@ -1,0 +1,113 @@
+				
+			Assignment for W2D2 Object Methods and Constructor Functions: 
+		1. Complete the following tasks from The JavaScript Language book. Try to answer them before 
+		looking at the solutions. For the ones asking you to write code do that in VSCode and use the esLint 
+		coding conventions we gave you. These are all from the chapter Objects: the basics.
+		
+		Section Object methods, “this”
+		
+	• Using “this” in object literal		
+		What is the result of accessing its ref ? Why?
+			function makeUser() {
+			return {
+			name: "John",
+			 ref: this };
+			}
+			let user = makeUser();
+			alert( user.ref.name ); // What's the result?  Ans. error
+
+		
+		
+	• Create a calculator: use the Mocha test in the calculatorTests.js file
+
+		Create an object calculator with three methods:
+		a. read() prompts for two values and saves them as object properties.
+		b. sum() returns the sum of saved values.
+		c. mul() multiplies saved values and returns the result.
+		
+		let calculator = {
+		// ... your code ...
+		};
+		calculator.read();
+		alert( calculator.sum() );
+		alert( calculator.mul() );
+
+              //<====solution from text book=======>//
+		let calculator = {
+		sum() {
+		return this.a + this.b;
+		},
+		mul() {
+		return this.a * this.b;
+		},
+		read() {
+		this.a = +prompt('a?', 0);
+		this.b = +prompt('b?', 0);
+		}
+		};
+		calculator.read();
+		alert( calculator.sum() );
+		alert( calculator.mul() );
+	 //<====end of the code=======>//
+
+
+		
+
+
+	• Chaining
+
+	There’s a ladder object that allows to go up and down:
+		let ladder = {
+		step: 0,
+		up() {
+		this.step++;
+		},
+		down() {
+		this.step--;
+		},
+	showStep: function() { // shows the current step
+		alert( this.step );
+		}
+		}
+	 //<====solution from text book=======>//
+		let ladder = {
+		step: 0,
+		up() {
+		this.step++;
+		return this;
+		},
+		down() {
+		this.step--;
+		return this;
+		},
+		showStep() {
+		alert( this.step );
+		return this;
+		}
+		};
+		ladder.up().up().down().up().down().showStep(); // 1
+
+We also can write a single call per line. For long chains it’s more readable
+
+		ladder
+		.up()
+		.up()
+		.down()
+		.up()
+		.down()
+		.showStep(); // 1
+ 	  //<====end of the code=======>//
+
+
+		Section Constructor, operator “new”
+		• Two functions – one object
+		• Create new Calculator (solve with the accumulatorTests.js Mocha test file in VSCode)
+		Write a constructor function Accumulator(initialValue, increment). The object it creates should:
+		• Store the current accumulated value in a property currentValue. The constructor should set this 
+		to be initialValue.
+		• The accumulate method should increase the currentValue by the increment.
+		• The report method should return the currentValue.
+		• Run this with the accumulatorTests.js Mocha test file.
+		2. Complete the implementation of the bank code in bank.js and test with bankTests.js.
+		Be sure to include the link to your <username>.github.io home page in your status report and that the 
+		Mocha tests for this assignment show up for the Methods and Constructor Functions link
