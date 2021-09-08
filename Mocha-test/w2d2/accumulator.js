@@ -23,4 +23,6 @@ function Accumulator(currentValue, increment) {
         return this.currentValue;
     }
 }
+// let sample = new Accumulator(5,10)
+//  console.log(sample)
 module.exports = { Accumulator };
