@@ -1,0 +1,44 @@
+        
+		Data type Tasks(13) home work
+         		  let str = "Hello";
+		str.test = 5;
+		alert(str.test);
+			How do you think, will it work? What will be shown?  // Answer:   error   in "use strict mode"
+		
+		
+Create a script that prompts the visitor to enter two numbers and then shows their sum.
+
+	let a = +prompt("The first number?", "");
+	let b = +prompt("The second number?", "");
+	alert( a + b ); 
+
+Create a function readNumber which prompts for a number until the visitor enters a valid
+numeric value.
+The resulting value must be returned as a number.
+
+	function readNumber() {
+	let num;
+	do {
+	num = prompt("Enter a number please?", 0);
+	} while ( !isFinite(num) );
+	if (num === null || num === '') return null;
+	return +num;
+	}
+	alert(`Read: ${readNumber()}`);
+
+
+This loop is infinite. It never ends. Why?  this loop continues running exept for i = 10;
+let i = 0;
+while (i != 10) {
+i += 0.2;
+}
+
+
+Write a function ucFirst(str) that returns the string str with the uppercased first character.
+
+			function ucFirst(str) {
+			if (!str) return str;
+			return str[0].toUpperCase() + str.slice(1);
+			}
+			alert( ucFirst("john") ); // John
+
