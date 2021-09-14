@@ -5,54 +5,65 @@
 		• Sum all numbers till the given one
 Write a function sumTo(n) that calculates the sum of numbers 1 + 2 + ... + n .
 
-The solution using a loop:
+	The solution using a loop:
 
-function sumTo(n) {
-let sum = 0;
-for (let i = 1; i <= n; i++) {
-sum += i;
-}
-return sum;
-}
-alert( sumTo(100) );
+	function sumTo(n) {
+	let sum = 0;
+	for (let i = 1; i <= n; i++) {
+	sum += i;
+	}
+	return sum;
+	}
+	alert( sumTo(100) );
 
-The solution using recursion:
-function sumTo(n) {
-if (n == 1) return 1;
-return n + sumTo(n - 1);
-}
-alert( sumTo(100) );
+	The solution using recursion:
+	function sumTo(n) {
+	if (n == 1) return 1;
+	return n + sumTo(n - 1);
+	}
+	alert( sumTo(100) );
 
-The solution using the formula: sumTo(n) = n*(n+1)/2 :
-function sumTo(n) {
-return n * (n + 1) / 2;
-}
-alert( sumTo(100) );
+	The solution using the formula: sumTo(n) = n*(n+1)/2 :
+	function sumTo(n) {
+	return n * (n + 1) / 2;
+	}
+	alert( sumTo(100) );
 
 
 
 		• Calculate factorial
-write a function factorial(n) that calculates n! using recursive calls.
+	write a function factorial(n) that calculates n! using recursive calls.
 
-function factorial(n) {
-return (n != 1) ? n * factorial(n - 1) : 1;
-}
-alert( factorial(5) ); // 120
+	function factorial(n) {
+	return (n != 1) ? n * factorial(n - 1) : 1;
+	}
+	alert( factorial(5) ); // 120
 
-function factorial(n) {
-return n ? n * factorial(n - 1) : 1;
-}
-alert( factorial(5) ); // 120
+	function factorial(n) {
+	return n ? n * factorial(n - 1) : 1;
+	}
+	alert( factorial(5) ); // 120
 
 
 
 		• Fibonacci numbers (the dynamic programming solution is optional)
 
-Write a function fib(n) that returns the n-th Fibonacci number.
+	Write a function fib(n) that returns the n-th Fibonacci number.
 
-function fib(n) {
-return n <= 1 ? n : fib(n - 1) + fib(n - 2);
-}
-alert( fib(3) ); // 2
-alert( fib(7) ); // 13
-// fib(77); // will be extremely slow!
+	function fib(n) {
+	return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+	}
+	alert( fib(3) ); // 2
+	alert( fib(7) ); // 13
+	// fib(77); // will be extremely slow!
+
+   class work
+
+
+    	function fib(n){
+ 	   if(n == 0)
+	return 0;
+	if (n= 1) 
+	return 1)
+	else return fib(n-1) + fib(n-2) ;
+
