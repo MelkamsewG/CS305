@@ -24,11 +24,11 @@ function factorialWithoutRecursion(n) {
 }
 
 
-function findCount(s, letter) {
-    if (s === letter)
+function findCount(str, letter) {
+    if (str === letter)
         return 1;
     else
-        return 1 + findCount(s.substr(1));
+        return 1 + findCount(str.substr(1));
 }
 
 function pow(x, n) {

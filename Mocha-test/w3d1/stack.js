@@ -49,3 +49,4 @@ function findLengthRecursive(s) {
         return 1 + findLengthRecursive(s.substr(1));
 }
 console.log(findLengthRecursive("Melkamu"));
+alert(arr.from(0))
