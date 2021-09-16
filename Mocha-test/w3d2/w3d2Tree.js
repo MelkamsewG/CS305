@@ -3,37 +3,48 @@
 // exports.treeNode =treeNode;
 // exports.contains = contains;
 // exports.subtree = subtree;
-/**
- * 
- * @param {value}
- * @returns {boolean} true if value exista, otherwise false
- */
-class TreeNode {
-    constructor(value) {
-        this.value = value;
-        this.descendents = [];
-    }
-}
-/* replacemtn of above treenode clas code */
-function treeNode2(value) {
+
+function TreeNode(value) {
     this.value = value;
-    this.descendents;
+    this.descendants = [];
 }
-// create nodes with values
+// create nodes with value
 const abe = new TreeNode('Abe');
 const homer = new TreeNode('Homer');
 const bart = new TreeNode('Bart');
 const lisa = new TreeNode('Lisa');
 const maggie = new TreeNode('Maggie');
-// associate root with is descendents
-abe.descendents.push(homer);
-homer.descendents.push(bart, lisa, maggie);
 
-/**
- * 
- * @param {*} node 
- * @returns{}
- */
+// associate root with its descendants  print values
+abe.descendants.push(homer);
+homer.descendants.push(bart, lisa, maggie);
+console.log(abe.value);
+console.log(homer.value);
+
+// check the existence of name in the tree
+function contains(tree, name) {
+    console.log("contains", tree, name);
+    let match = false;
+    if (tree.value === name)
+        return true;
+    if (Array.isArray(tree)) {
+        tree.forEach(function(item) {
+            console.log("Inside forEach", item, value, name);
+            if (item.value === name) {
+                console.log("item match")
+                match = true;
+            } else if (item.descendents.length > 0) {
+                console.log("Inside item descendants", item, value, name);
+                match = containsRecursion(item.descendents, name);
+            }
+        });
+
+    } else if (tree.descendents.length > 0) {
+        match = containsRecursion(tree.descendents, name);
+    }
+    return match;
+}
+console.log("contains", containsRecursion(abe, "Lisa"));
 
 function printName(node) {
 
@@ -47,46 +58,10 @@ function printName(node) {
         }
     }
 }
+console.log(printName(Lisa));
 
-console.log(printName(abe));
 
-/**
- * 
- * @param {node} node 
- * @param {target} target 
- * @returns {boolean} true if target exists, otherwise false
- */
-function contains(node, target) {
-    if (node.descendents === null) {
-        if (node.value === target) {
-            return true;
-        } else {
-            return false;
-        }
-    } else {
-        let childresult = false;
-        if (node.value === target) {
-            return true;
-        }
-        for (let child of node.descendents) {
-            childresult = contains(child, target)
-            if (childresult === true) {
-                return true;
-            }
-        }
-        return childresult;
-    }
-}
 
-console.log("expects true", contains(abe, "Lisa")); //this should be true;
-console.log("expects true", contains(abe, "Crusty")); //this should be true;
-
-/**
- * 
- * @param {treeNode} TreeNode 
- * @param {target} target 
- * @returns {subtree} with Homer as the root
- */
 function subtree(TreeNode, target) {
     /* base case -- if children is null or empty */
     if (subtree.descendents === []) {
@@ -210,44 +185,3 @@ console.log(linkedlist(abe));
 a. In a destructurng assignment
 b. In a function call
 */
-
-function TreeNode(value) {
-    this.value = value;
-    this.descendants = [];
-}
-// create nodes with value
-const abe = new TreeNode('Abe');
-const homer = new TreeNode('Homer');
-const bart = new TreeNode('Bart');
-const lisa = new TreeNode('Lisa');
-const maggie = new TreeNode('Maggie');
-
-// associate root with its descendants
-abe.descendants.push(homer);
-homer.descendants.push(bart, lisa, maggie);
-console.log(abe.value);
-console.log(homer.value);
-
-function contains(tree, name) {
-    console.log("contains", tree, name);
-    let match = false;
-    if (tree.value === name)
-        return true;
-    if (Array.isArray(tree)) {
-        tree.forEach(function(item) {
-            console.log("Inside forEach", item, value, name);
-            if (item.value === name) {
-                console.log("item match")
-                match = true;
-            } else if (item.descendents.length > 0) {
-                console.log("Inside item descendants", item, value, name);
-                match = containsRecursion(item.descendents, name);
-            }
-        });
-
-    } else if (tree.descendents.length > 0) {
-        match = containsRecursion(tree.descendents, name);
-    }
-    return match;
-}
-//console.log("contains", containsRecursion(abe, "Lisa"));
