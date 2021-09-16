@@ -1,6 +1,6 @@
 "use strict"
 
-// exports.treeNode2 =treeNode2;
+// exports.treeNode =treeNode;
 // exports.contains = contains;
 // exports.subtree = subtree;
 /**
