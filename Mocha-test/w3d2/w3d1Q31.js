@@ -65,10 +65,10 @@ printNamesWithLoop(node1)
 2. Modify both versions to return an array containing the “name:value” strings for the entries rather 
 than printing the values to the console.
 */
-function nodeNameValueArray(node1) {
-    let array = [];
+// function nodeNameValueArray(node1) {
+//     let array = [];
 
-    array.push(node1.name + ":" + node1.value)
-    array.push(child.name + ":" + child.value)
+//     array.push(node1.name + ":" + node1.value)
+//     array.push(child.name + ":" + child.value)
 
-}
+// }

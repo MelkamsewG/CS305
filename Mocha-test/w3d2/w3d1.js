@@ -14,11 +14,11 @@ function factorial(num) {
         return num * factorial(num - 1);
 }
 
-function fibonacciRecu(n) {
+function fib(n) {
     if (n < 2) {
         return n;
     }
-    return fibonacciRecu(n - 1) + fibonacciRecu(n - 2)
+    return fib(n - 1) + fib(n - 2)
 }
 
 function outputList(list, result = "") {
@@ -60,7 +60,8 @@ function reverseListLoop(list) {
     return reverse;
 }
 
-function reverseList(list, result = []) {
+function reverseList(list) {
+    let result = []
     if (list !== null) {
         result.unshift(list.value)
         reverseList(list.next, result);
