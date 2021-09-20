@@ -124,7 +124,7 @@ What will be the result of this code?  */
 let x = 1;
 
 function func() {
-    console.log(x); // ?
+    console.log(x); // 1
     let x = 2;
 }
 func();
@@ -182,9 +182,6 @@ function byField(fieldName) {
     return (a, b) => a[fieldName] > b[fieldName] ? 1 : -1;
 }
 
-
-
-
 /*•
 Army of functions
 For makeArmy replace the inner
@@ -193,5 +190,3 @@ let shooter = function() {
     console.log("I am shooter ", idx);
     return idx;
 };
-(EC) Section: Function object, NFE• Set and decrease
-for counter
