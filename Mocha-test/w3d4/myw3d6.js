@@ -252,3 +252,44 @@
 //     }
 // };
 // group.showList();
+
+
+
+// function Calculator( a, b){
+//     function add(){
+//     return a+b;
+//  }     ​
+// function subtract() {
+// return a-b;
+// }
+// function mult() {
+// ​return a*b;
+// }
+// }
+// Calculator(2, 3);
+
+
+
+let group = {
+    title: "Our Group",
+    students: ["John", "Pete", "Alice"]
+}
+
+// showList: function() {
+//     console.log(this.students);
+//     function forEachHelper(student){
+//         console.log(this.title + ': ' + student);
+function minLength() {
+    let minlength = 2 ** 53;
+    for (let key in group) {
+        for (let key1 in group[key])
+            if (key1.length < min)
+                min = key1.length;
+        console.log(min)
+    }
+    return minlength
+}
+
+function(arr) {
+    return this.students.reduce(function(student) => (min([group.students.key.length]));
+    }
