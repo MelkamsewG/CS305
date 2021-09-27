@@ -10,7 +10,7 @@
 const assert = require("assert");
 const acc = require("./account.js");
 const bnk = require("./bank.js");
-const chk = require("./checkingAccount.js");
+const chk = require("./CheckingAccount.js");
 const sav = require("./savingsaccount.js");
 
 describe("Account class", () => {
